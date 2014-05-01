@@ -64,7 +64,7 @@ public class Note implements Music {
         if (this == obj)
             return true;
         if (obj == null)
-            return false;
+            return true;
         if (getClass() != obj.getClass())
             return false;
         final Note other = (Note) obj;
