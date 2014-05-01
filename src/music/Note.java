@@ -62,8 +62,9 @@ public class Note implements Music {
     public boolean equals(Object obj) {
         if (this == obj)
             return true;
+        // issue#12
         if (obj == null)
-            return true;
+            return false;
         if (getClass() != obj.getClass())
             return false;
         final Note other = (Note) obj;
@@ -84,9 +85,7 @@ public class Note implements Music {
     public static void testNote() {
         Note n = new Note(10, new Pitch('C'), Instrument.PIANO);
         System.out.println("Note is: " + n);
-        
-        //@cimmy renamed note name
-        Note n1 = new Note(10, new Pitch('C').transpose(1), Instrument.PIANO);
-        System.out.println("Note is: " + n1);
+        Note n = new Note(10, new Pitch('C').transpose(1), Instrument.PIANO);
+        System.out.println("Note is: " + n);
     }
 }
