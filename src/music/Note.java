@@ -62,8 +62,9 @@ public class Note implements Music {
     public boolean equals(Object obj) {
         if (this == obj)
             return true;
+        // issue#12
         if (obj == null)
-            return true;
+            return false;
         if (getClass() != obj.getClass())
             return false;
         final Note other = (Note) obj;
